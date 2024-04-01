@@ -1,0 +1,6 @@
+﻿l_english:
+  monthly_turn_report.1.t:0 "Monthly Report"
+  monthly_turn_report.1.desc:0 "Current Manpower = [Player.MakeScope.Var('current_manpower').GetValue]. Previous Manpower = [Player.MakeScope.Var('previous_manpower').GetValue].\nCurrent Treasury = [Player.MakeScope.Var('current_treasury').GetValue]. Previous Treasury = [Player.MakeScope.Var('previous_treasury').GetValue].\nCurrent Stability = [Player.MakeScope.Var('current_stability').GetValue]. Previous Stability = [Player.MakeScope.Var('previous_stability').GetValue].\nCurrent Political Influence = [Player.MakeScope.Var('current_political_influence').GetValue]. Previous Political Influence = [Player.MakeScope.Var('previous_political_influence').GetValue].\nCurrent Military Experience = [Player.MakeScope.Var('current_military_experience').GetValue]. Previous Military Experience = [Player.MakeScope.Var('previous_military_experience').GetValue].\n\n"
+
+  monthly_turn_report.1.a:0 "Continue"
+  monthly_turn_report.1.tooltip:0 "This event occurs at the beginning of each month."

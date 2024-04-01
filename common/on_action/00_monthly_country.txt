@@ -1,0 +1,5 @@
+monthly_country_pulse = {
+
+	events = { monthly_turn_report.1 }
+	
+}

@@ -1,0 +1,75 @@
+namespace = monthly_turn_report
+
+monthly_turn_report.1 = {
+    type = country_event
+    title = monthly_turn_report.1.t
+    desc = monthly_turn_report.1.desc
+    
+    immediate = {
+        # Aggiornamento current_manpower
+        set_variable = { name = current_manpower value = manpower }
+        change_variable = { name = current_manpower multiply = 500 }
+        round_variable = { name = current_manpower nearest = 1 }
+
+        # Aggiornamento treasury
+        set_variable = { name = current_treasury value = treasury }
+        round_variable = { name = current_treasury nearest = 1 }
+
+        # Aggiornamento stability
+        set_variable = { name = current_stability value = stability }
+        round_variable = { name = current_stability nearest = 1 }
+
+        # Aggiornamento political influence
+        set_variable = { name = current_political_influence value = political_influence }
+        round_variable = { name = current_political_influence nearest = 1 }
+
+        # Aggiornamento military experience
+        set_variable = { name = current_military_experience value = military_experience }
+        round_variable = { name = current_military_experience nearest = 1 }
+    }
+
+    option = {
+        name = monthly_turn_report.1.a
+        custom_tooltip = monthly_turn_report.1.tooltip
+    }
+
+    after = {
+        # Blocco per current_manpower
+        if = {
+            limit = {
+              has_variable = current_manpower
+            }
+            set_variable = { name = "previous_manpower" value = var:current_manpower }
+        }
+        
+        # Blocco per current_treasury
+        if = {
+            limit = {
+              has_variable = current_treasury
+            }
+            set_variable = { name = "previous_treasury" value = var:current_treasury }
+        }
+
+        # Blocco per current_stability
+        if = {
+            limit = {
+              has_variable = current_stability
+            }
+            set_variable = { name = "previous_stability" value = var:current_stability }
+        }
+
+        # Blocco per current_political_influence
+        if = {
+            limit = {
+              has_variable = current_political_influence
+            }
+            set_variable = { name = "previous_political_influence" value = var:current_political_influence }
+        }
+        if = {
+            limit = {
+              has_variable = current_military_experience
+            }
+            set_variable = { name = "previous_military_experience" value = var:current_military_experience }
+        }   
+    }
+}
